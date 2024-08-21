@@ -17,7 +17,9 @@
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "remix-auth": "^3.6.0",
+    "remix-auth-auth0": "^1.9.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.19.3",
