@@ -15,11 +15,10 @@ import Modal_1 from "./components/modal";
 import Card_1 from "./components/card";
 import {Link} from "@remix-run/react"
 import LinkDesign from "./components/linksDesign";
-
 import {AiTwotoneEdit , AiFillDelete } from "react-icons/ai"
 import {IoChevronBackCircleSharp} from "react-icons/io5"
 import { PrismaClient } from "@prisma/client"
-import {useAuth0} from '@auth0/auth0-react';
+
 
 
 export const meta: V2_MetaFunction = () => {
@@ -85,12 +84,21 @@ export const action: ActionFunction = async ({ request }) => {
   return firstFormData
 }
 
-export default function Index() {
+//  const env = process.env;
 
+//  console.log(
+// 	  env.AUTH0_DOMAIN,
+//     env.AUTH0_CLIENT_ID,
+//     env.AUTH0_CLIENT_SECRET,
+//     env.AUTH0_CALLBACK_URL,
+//  )
+export default function Index() {
+  
   // const loaderData = useLoaderData();
   // const formData = useActionData<typeof action>();
   // console.log(formData)
   // console.log(typeof formData)
+  
   
   return (
 
@@ -131,24 +139,20 @@ export default function Index() {
 
             <Button label="Suscribe now" onClick={() => console.log("Information sended!")} style ="bg-violet-950 text-white rounded-md shadow-gray-500 shadow-sm py-1.5 px-1.5 my-px my-3.5 mt-5 mb-5 mx-1.5 w-3/4 transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 hover:bg-indigo-500 duration-300 ... cursor-pointer" type="submit"/>
 
-            <LinkToPost text="Terms and conditions" link="/post"/>
+            <LinkToPost text="Login to PlanES" link="/dashboard"/>
+            <LinkToPost text="Logout to PlanES" link="/logout"/>
 
             <LinkDesign text="Check your info" link="/post" style="bg-violet-950 text-white rounded-md shadow-gray-500 shadow-sm py-1.5 px-1.5 my-3.5 mt-5 mb-5 mx-1.5 w-3/4 h-20 transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-110 hover:bg-indigo-500 duration-300 ... cursor-pointer flex flex-col justify-center items-center"/>
 
           </Form>
 
         </div>
-
+        
       </div>
-
       
       <Modal_1 title="User" name="daniel" lastName="payan" phoneNumber="6188239428" email="dany.sasket@gmail.com"/>
 
     </Background>
-    
-    
-    
-
       
     );
     
